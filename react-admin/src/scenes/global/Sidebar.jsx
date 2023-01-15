@@ -62,36 +62,56 @@ const Sidebar = () => {
                 },
             }}
             >
-                <ProSidebar>
-                    <Menu>
+                <ProSidebar collapsed={isCollapsed}>
+                    <Menu iconShape="square">
+
+                    {/* Logo and Menu Icon */}
+                        <MenuItem
+                            onClick={() => setIsCollapsed(!isCollapsed)}
+                            icon={isCollapsed ? <MenuOutlinedIcon /> : undefined}
+                            style={{
+                                margin: '10px 0 20px 0',
+                                color: colors.grey[100],
+                            }}
+                        >
+                            {!isCollapsed && (
+                                <Box display='flex' justifyContent='space-between' alignItems='center' ml='15px'>
+                                    <Typography variant='h3' color={colors.grey[100]}>ADMINIS</Typography>
+                                    <IconButton>
+                                        <MenuOutlinedIcon />
+                                    </IconButton>
+                                </Box>
+                            )}
+                        </MenuItem>
+                    
 
                     {/** User */}
-                    {!isCollapsed && (
-                        <Box mb="25px">
-                            <Box display='flex' justifyContent='center' alignItems='center'>
-                                <img 
-                                    alt="profile-img"
-                                    width="100px"
-                                    height="100px"
-                                    src={`../../assets/me.png`} 
-                                    style={{ cursor: 'pointer', borderRadius: '50%'}}
-                                />
-                            </Box>
+                        {!isCollapsed && (
+                            <Box mb="25px">
+                                <Box display='flex' justifyContent='center' alignItems='center'>
+                                    <img 
+                                        alt="profile-img"
+                                        width="100px"
+                                        height="100px"
+                                        src={`../../assets/me.png`} 
+                                        style={{ cursor: 'pointer', borderRadius: '50%'}}
+                                    />
+                                </Box>
 
-                            <Box textAlign="center">
-                                <Typography 
-                                    variant="h2" 
-                                    color={colors.grey[100]} 
-                                    fontWeight='bold' 
-                                    sx={{ m: '10px 0 0 0' }}
-                                    >
-                                        Ya Boi
-                                    </Typography>
+                                <Box textAlign="center">
+                                    <Typography 
+                                        variant="h2" 
+                                        color={colors.grey[100]} 
+                                        fontWeight='bold' 
+                                        sx={{ m: '10px 0 0 0' }}
+                                        >
+                                            Ya Boi
+                                        </Typography>
 
-                                <Typography variant='h5' color={colors.greenAccent[500]}>VP Fancy Man</Typography>
+                                    <Typography variant='h5' color={colors.greenAccent[500]}>VP Fancy Man</Typography>
+                                </Box>
                             </Box>
-                        </Box>
-                    )}
+                        )}
                         
                     {/** Menu Items */}
                         <Box paddingLeft={isCollapsed ? undefined : '10%'}>
@@ -102,6 +122,15 @@ const Sidebar = () => {
                                 selected={selected}
                                 setSelected={setSelected}
                             />
+
+                            <Typography
+                                variant="h6"
+                                color={colors.grey[300]}
+                                sx={{ m: '15px 0 5px 20px' }}
+                            >
+                                Data
+                            </Typography>
+                            
                             <Item
                                 title='Manage Team'
                                 to='/team'
@@ -123,6 +152,15 @@ const Sidebar = () => {
                                 selected={selected}
                                 setSelected={setSelected}
                             />
+
+                            <Typography
+                                variant="h6"
+                                color={colors.grey[300]}
+                                sx={{ m: '15px 0 5px 20px' }}
+                            >
+                                Pages
+                            </Typography>
+                            
                             <Item
                                 title='Profile Form'
                                 to='/form'
@@ -144,6 +182,15 @@ const Sidebar = () => {
                                 selected={selected}
                                 setSelected={setSelected}
                             />
+
+                            <Typography
+                                variant="h6"
+                                color={colors.grey[300]}
+                                sx={{ m: '15px 0 5px 20px' }}
+                            >
+                                Charts
+                            </Typography>
+
                             <Item
                                 title='Bar Chart'
                                 to='/bar'
