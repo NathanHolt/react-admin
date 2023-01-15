@@ -22,7 +22,9 @@ function App() {
     <ColorModeContext.Provider value={colorMode}>
       <ThemeProvider theme={theme}>
         <CssBaseline />
+
         <div className="App">
+          <Sidebar />
           <main className="content">
             <Topbar />
             <Routes>
@@ -40,6 +42,7 @@ function App() {
             </Routes>
           </main>
         </div>
+        
       </ThemeProvider>
     </ColorModeContext.Provider>
   );
