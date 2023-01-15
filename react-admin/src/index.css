@@ -4,14 +4,14 @@
 html,
 body,
 #root,
-.app,
+.App,
 .content {
     height: 100%;
     width: 100%;
     font-family: "Source Sans Pro", sans-serif;
 }
 
-.app {
+.App {
     display: flex;
     position: relative;
 }
