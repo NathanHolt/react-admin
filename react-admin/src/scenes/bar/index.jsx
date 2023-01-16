@@ -1,6 +1,7 @@
 import { Box, useTheme } from "@mui/material";
 import { tokens } from '../../theme'
 import Header from '../../components/Header'
+import BarChart from "../../components/BarChart";
 
 
 const Bar = () => {
@@ -9,7 +10,10 @@ const Bar = () => {
 
     return (
         <Box m='20px'>
-            <Header title='DASHBOARD' subtitle='Welcome to your Dashboard' />
+            <Header title='BARCHART' subtitle='Simple Barchart' />
+            <Box height='75vh'>
+                <BarChart />
+            </Box>
         </Box>
     )
 }
