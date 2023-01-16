@@ -10,7 +10,7 @@ const Bar = () => {
 
     return (
         <Box m='20px'>
-            <Header title='BARCHART' subtitle='Simple Barchart' />
+            <Header title='BAR CHART' subtitle='Simple Bar Chart' />
             <Box height='75vh'>
                 <BarChart />
             </Box>
