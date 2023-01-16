@@ -265,6 +265,29 @@ export const mockDataTeam = [
       date: "05/02/2021",
     },
   ];
+
+  export const mockFAQ = [
+    {
+      question: "What happens while my Magic or Resonance attribute is at 0?",
+      answer: "You lose the ability to perform any and all activities related to that attribute. Magic 0 means no spellcasting, no summoning, no adept powers, no access to the astral plane, and so on. Resonance 0 means no complex forms, no living persona, no compiling, etc. While your Magic or Resonance is at 0, you're in effect temporarily mundane until such time that you restore your attribute to at least 1.",
+    },
+    {
+      question: "What’s the difference between rounds and turns?",
+      answer: "The two terms are not interchangeable. A round encompasses each acting character’s turn within it. Once every character has had their turn, a new round begins.",
+    },
+    {
+      question: "Do statuses also apply to astral projection and Matrix VR?",
+      answer: "In most cases statuses are either clearly applicable or clearly not applicable while a character is astrally projecting or using VR. For example, Dazed and Frightened are good examples of statuses that apply equally across all three of Shadowrun’s “worlds.” If a physical body is suffering Burning #, that body is still suffering damage even while the mind is “out and about” in astral or VR. On the other hand, being subjected to the Wet status will not have any relevance to activities in astral space or VR.  When it is not so clearcut, the potential for relevancy is reserved to gamemaster discretion. For example, a gamemaster might rule that an astrally projecting magician can gain the Prone status or even some Cover # by diving into a bright spot of mana, or a hacker’s virtual persona could gain them by ducking into a nearby datastream. The visual sense is not used in astral space and is overridden by simsense input in VR, but the gamemaster might use the Blinded # status to represent some other penalty while on the astral plane or in VR.",
+    },
+    {
+      question: "Can metatypes select qualities that are racial traits for other metatypes?",
+      answer: "Yes. While trolls automatically get Thermographic Vision and Dermal Deposits for free, nothing prohibits humans or elves from purchasing those qualities.",
+    },
+    {
+      question: "What are the rules for jumping?",
+      answer: "In almost all cases, it doesn’t really matter exactly how high or how far a character jumped. Rather than knowing the exact number of centimeters leapt, all you normally need to know is whether the jump was high or far enough. Did they clear the gap? Did they reach high enough? These yes/no questions are best resolved by a Success test. In Shadowrun, Sixth World a gamemaster considers the context of the distance and any other variables such as how much of a running start can be used, how heavy the carried load, whether the horizontal jump is landing on a higher or lower plane, whether a vertical jump needs to only reach a rung with fingers or completely clear a height with the entire body, and etc. Use the Threshold guidelines onp. 36, SR6 to establish a threshold based on the total assessed difficulty for an Athletics + Strength test.",
+    },
+  ]
   
   export const mockTransactions = [
     {
