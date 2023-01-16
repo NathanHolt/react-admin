@@ -1,7 +1,7 @@
 import { ResponsiveLine } from '@nivo/line'
 import { useTheme } from "@mui/material";
 import { tokens } from '../theme'
-import { mockBarData as data } from '../data/mockData'
+import { mockLineData as data } from '../data/mockData'
 
 const LineChart = ({ isDashBoard = false }) => {
     const theme = useTheme()
@@ -10,6 +10,39 @@ const LineChart = ({ isDashBoard = false }) => {
     return (
         <ResponsiveLine
             data={data}
+            theme={{
+                axis: {
+                    domain: {
+                        line: {
+                            stroke: colors.grey[100]
+                        }
+                    },
+                    legend: {
+                        text: {
+                            fill: colors.grey[100]
+                        }
+                    },
+                    ticks: {
+                        line: {
+                            stroke: colors.grey[100],
+                            strokeWidth: 1
+                        },
+                        text: {
+                            fill: colors.grey[100]
+                        }
+                    }
+                },
+                legends: {
+                    text: {
+                        fill: colors.grey[100]
+                    }
+                },
+                tooltip: {
+                    container: {
+                        color: colors.primary[500]
+                    }
+                }
+            }}
             margin={{ top: 50, right: 110, bottom: 50, left: 60 }}
             xScale={{ type: 'point' }}
             yScale={{
@@ -27,20 +60,21 @@ const LineChart = ({ isDashBoard = false }) => {
                 tickSize: 5,
                 tickPadding: 5,
                 tickRotation: 0,
-                legend: 'transportation',
+                legend: isDashBoard ? undefined : 'transportation',
                 legendOffset: 36,
                 legendPosition: 'middle'
             }}
             axisLeft={{
                 orient: 'left',
                 tickSize: 5,
+                tickValues: 5,
                 tickPadding: 5,
                 tickRotation: 0,
-                legend: 'count',
+                legend: isDashBoard ? undefined : 'count',
                 legendOffset: -40,
                 legendPosition: 'middle'
             }}
-            colors={{ scheme: 'paired' }}
+            colors={isDashBoard ? { datum: "color" } : { scheme: "paired" }}
             lineWidth={3}
             pointSize={10}
             pointColor={{ theme: 'background' }}
