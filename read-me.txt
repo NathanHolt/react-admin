@@ -1,3 +1,4 @@
-Testing and first commit
-
-playing with github desktop
+To run:
+cd into the inner react-admin folder
+npm install or npm i
+npm start
