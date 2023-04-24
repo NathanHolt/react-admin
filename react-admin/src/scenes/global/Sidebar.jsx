@@ -93,7 +93,7 @@ const Sidebar = () => {
                                         alt="profile-img"
                                         width="100px"
                                         height="100px"
-                                        src={`../../assets/me.png`} 
+                                        src={`../../assets/IMG_7826.PNG`} 
                                         style={{ cursor: 'pointer', borderRadius: '50%'}}
                                     />
                                 </Box>
